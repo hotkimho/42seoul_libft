@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:53:32 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/19 15:53:49 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/19 18:17:07 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlne(const char *s)
+int	ft_strlen(const char *s)
 {
 	int	len;
 
