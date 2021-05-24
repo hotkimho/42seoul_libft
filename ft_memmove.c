@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 17:59:49 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/20 20:29:20 by hkim2            ###   ########.fr       */
+/*   Created: 2021/05/23 13:38:41 by hkim2             #+#    #+#             */
+/*   Updated: 2021/05/23 13:54:14 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	º
+	unsigned char	*ptr_dst;
+	unsigned char	*ptr_src;
+	size_t			i;
+
+	i = 0;
+	ptr_dst = (unsigned char *)dst;
+	ptr_src = (unsigned char *)src;
+	if (dst < src)
+		while (i < len)
+		{
+			ptr_dst[i] = ptr_src[i];
+			i++;
+		}
+	else
+		while (len)
+		{
+			ptr_dst[len - 1] = ptr_src[len - 1];
+			len--;
+		}
+	return (dst);
 }
