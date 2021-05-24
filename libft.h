@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:28:50 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/23 15:57:13 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/24 12:44:14 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 #endif
