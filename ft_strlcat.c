@@ -6,13 +6,13 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:40:31 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/20 14:41:28 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/27 16:20:18 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t		index;
 	size_t		dest_len;

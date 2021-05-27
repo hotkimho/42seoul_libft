@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 12:43:39 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/27 17:22:08 by hkim2            ###   ########.fr       */
+/*   Created: 2021/05/27 17:58:40 by hkim2             #+#    #+#             */
+/*   Updated: 2021/05/27 18:29:39 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t				i;
-	unsigned char		*ptr_s1;
-	unsigned char		*ptr_s2;
+	size_t			i;
+	void			*ptr;
+	unsigned char	*tmp;
 
-	if (!s1 || !s2)
-		return (0);
-	ptr_s1 = (unsigned char *)s1;
-	ptr_s2 = (unsigned char *)s2;
+	if (!count || !size)
+		return (NULL);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	tmp = (unsigned char *)ptr;
 	i = 0;
-	while (i < n)
+	while (i < count * size)
 	{
-		if (ptr_s1[i] != ptr_s2[i])
-			return (ptr_s1[i] - ptr_s2[i]);
+		tmp[i] = 0;
 		i++;
 	}
-	return (0);
+	return (ptr);
 }
