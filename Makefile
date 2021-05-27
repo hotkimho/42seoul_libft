@@ -6,7 +6,7 @@
 #    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 17:24:17 by hkim2             #+#    #+#              #
-#    Updated: 2021/05/27 18:25:18 by hkim2            ###   ########.fr        #
+#    Updated: 2021/05/27 18:45:37 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,9 @@ FUNC = ft_strlen\
 	   ft_isprint\
 	   ft_toupper\
 	   ft_tolower\
-	   ft_calloc
+	   ft_calloc\
+	   ft_strdup\
+	   ft_substr
 
 SRCS = $(addsuffix .c, $(FUNC))
 
