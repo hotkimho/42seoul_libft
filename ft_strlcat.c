@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:40:31 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/27 16:20:18 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/29 17:01:54 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
+	if (size < dest_len)
+		return (size + src_len);
 	while (*src && dest_len + index + 1 < size)
 		*(dest + dest_len + index++) = *(src++);
 	*(dest + dest_len + index) = 0;
-	if (dest_len > size)
-		return (src_len + size);
-	else
-		return (dest_len + src_len);
+	return (dest_len + src_len);
 }
