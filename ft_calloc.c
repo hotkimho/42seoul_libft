@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:58:40 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/27 18:29:39 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/29 18:30:54 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void			*ptr;
 	unsigned char	*tmp;
 
-	if (!count || !size)
-		return (NULL);
+	if (count == 0 || size == 0)
+		return (ft_strdup(""));
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);

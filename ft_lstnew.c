@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 17:10:55 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/29 17:32:16 by hkim2            ###   ########.fr       */
+/*   Created: 2021/05/29 18:59:29 by hkim2             #+#    #+#             */
+/*   Updated: 2021/05/29 19:09:55 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	size_t			i;
-	unsigned char	*dst_ptr;
-	unsigned char	*src_ptr;
+	t_list	*list;
 
-	dst_ptr = (unsigned char *)dst;
-	src_ptr = (unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		dst_ptr[i] = src_ptr[i];
-		if (src_ptr[i] == (unsigned char)c)
-			return (&dst_ptr[i + 1]);
-		i++;
-	}
-	return (NULL);
+	list = (t_list *)malloc(sizeof(t_list));
+	if (!list)
+		return (NULL);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

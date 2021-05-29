@@ -6,7 +6,7 @@
 #    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 17:24:17 by hkim2             #+#    #+#              #
-#    Updated: 2021/05/29 15:14:52 by hkim2            ###   ########.fr        #
+#    Updated: 2021/05/29 20:44:04 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ FUNC = ft_strlen\
 	   ft_memccpy\
 	   ft_memmove\
 	   ft_memchr\
+	   ft_memcmp\
 	   ft_strrchr\
 	   ft_strnstr\
 	   ft_strncmp\
@@ -50,9 +51,16 @@ FUNC = ft_strlen\
 	   ft_putendl_fd\
 	   ft_putnbr_fd
 
-SRCS = $(addsuffix .c, $(FUNC))
+BONUS =	ft_lstnew\
+		ft_lstadd_front\
+		ft_lstsize\
+		ft_lstlast\
+		ft_lstadd_back\
 
+SRCS = $(addsuffix .c, $(FUNC))
+BONUS_SRCS = $(addsuffix .c, $(BONUS))
 OBJS = $(addsuffix .o, $(FUNC))
+BONUS_OBJS = $(addsuffix .o, $(BONUS))
 
 .c.o: $(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -62,6 +70,8 @@ $(NAME) : $(OBJS)
 
 all : $(NAME)
 
+bonus : $(BONUS_OBJS)
+	$(AR) $(NAME) $^
 clean:
 	$(RM) $(OBJS)
 

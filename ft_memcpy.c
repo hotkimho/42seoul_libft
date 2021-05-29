@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:50:50 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/20 16:49:32 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/29 18:43:36 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ void			*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*src_ptr;
 	unsigned char	*dst_ptr;
 
-	if (dst == NULL || src == NULL)
+	if (!dst && !src)
 		return (NULL);
-	if (n < 1)
-		return (dst);
 	i = 0;
 	src_ptr = (unsigned char *)src;
 	dst_ptr = (unsigned char *)dst;

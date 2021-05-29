@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 17:10:55 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/29 17:32:16 by hkim2            ###   ########.fr       */
+/*   Created: 2021/05/29 19:47:10 by hkim2             #+#    #+#             */
+/*   Updated: 2021/05/29 20:45:35 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t			i;
-	unsigned char	*dst_ptr;
-	unsigned char	*src_ptr;
-
-	dst_ptr = (unsigned char *)dst;
-	src_ptr = (unsigned char *)src;
-	i = 0;
-	while (i < n)
+	if (new == NULL || lst == NULL)
+		return ;
+	if (*lst == NULL)
 	{
-		dst_ptr[i] = src_ptr[i];
-		if (src_ptr[i] == (unsigned char)c)
-			return (&dst_ptr[i + 1]);
-		i++;
+		*lst = new;
+		return ;
 	}
-	return (NULL);
+	new->next = *lst;
+	*lst = new;
 }
