@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 13:05:47 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/29 13:49:46 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/29 23:31:54 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ static int		get_size(int n)
 char			*ft_itoa(int n)
 {
 	int			size;
-	int			i;
 	char		*str;
 
 	if (n == 0)
@@ -39,7 +38,6 @@ char			*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	size = get_size(n);
-	i = 0;
 	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);

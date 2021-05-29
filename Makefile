@@ -6,7 +6,7 @@
 #    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 17:24:17 by hkim2             #+#    #+#              #
-#    Updated: 2021/05/29 20:44:04 by hkim2            ###   ########.fr        #
+#    Updated: 2021/05/29 23:35:21 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,10 @@ FUNC = ft_strlen\
 	   ft_putnbr_fd
 
 BONUS =	ft_lstnew\
-		ft_lstadd_front\
-		ft_lstsize\
-		ft_lstlast\
-		ft_lstadd_back\
+	ft_lstadd_front\
+	ft_lstsize\
+	ft_lstlast\
+	ft_lstadd_back\
 
 SRCS = $(addsuffix .c, $(FUNC))
 BONUS_SRCS = $(addsuffix .c, $(BONUS))
