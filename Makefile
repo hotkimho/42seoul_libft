@@ -6,7 +6,7 @@
 #    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 17:24:17 by hkim2             #+#    #+#              #
-#    Updated: 2021/05/29 23:35:21 by hkim2            ###   ########.fr        #
+#    Updated: 2021/05/30 17:55:28 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,10 @@ BONUS =	ft_lstnew\
 	ft_lstsize\
 	ft_lstlast\
 	ft_lstadd_back\
+	ft_lstdelone\
+	ft_lstclear\
+	ft_lstiter\
+	ft_lstmap
 
 SRCS = $(addsuffix .c, $(FUNC))
 BONUS_SRCS = $(addsuffix .c, $(BONUS))
@@ -73,7 +77,7 @@ all : $(NAME)
 bonus : $(BONUS_OBJS)
 	$(AR) $(NAME) $^
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:
 	$(RM) $(NAME)

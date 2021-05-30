@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 01:32:50 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/30 01:39:53 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/05/30 16:46:34 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-	int	lst_len;
-
 	if (lst == NULL || f == NULL)
 		return ;
-	i = 0;
-	lst_len = ft_lstsize(lst);
-	while (i < lst_len)
+	while (lst)
 	{
 		if (lst->content)
 			f(lst->content);
