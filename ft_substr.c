@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:47:23 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/29 16:36:57 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/06/02 16:45:12 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,19 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*ptr;
 	size_t		i;
-
+	
 	if (!s)
 		return (NULL);
-	ptr = (char *)malloc(len + 1);
+	if ((size_t)ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start < len)
+		ptr = (char *)malloc(ft_strlen(s) - start + 1);
+	else
+		ptr = (char *)malloc(len + 1);
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < len && (int)(i + start) < ft_strlen(s))
+	while (i < len && (i + start) < ft_strlen(s))
 	{
 		ptr[i] = s[i + start];
 		i++;

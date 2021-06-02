@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 15:49:54 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/29 18:28:47 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/06/02 15:56:53 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *hay, const char *needle, size_t len)
 
 	if (!(*needle))
 		return ((char *)hay);
-	if (ft_strlen(hay) < ft_strlen(needle) || ft_strlen(needle) > (int)len)
+	if (ft_strlen(hay) < ft_strlen(needle) || ft_strlen(needle) > len)
 		return (NULL);
 	i = 0;
 	while (hay[i] && i < len)

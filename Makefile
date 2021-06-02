@@ -6,7 +6,7 @@
 #    By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 17:24:17 by hkim2             #+#    #+#              #
-#    Updated: 2021/05/30 17:55:28 by hkim2            ###   ########.fr        #
+#    Updated: 2021/06/02 17:13:40 by hkim2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,12 +74,15 @@ $(NAME) : $(OBJS)
 
 all : $(NAME)
 
-bonus : $(BONUS_OBJS)
-	$(AR) $(NAME) $^
-clean:
+bonus : $(OBJS) $(BONUS_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+
+clean :
 	$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean:
+fclean : clean
 	$(RM) $(NAME)
 
-re: clean all
+re: fclean all
+
+.PHONY : bonus all clean fclean re

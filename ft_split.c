@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 16:40:00 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/28 18:38:29 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/06/02 15:58:26 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static char		**ft_error(char **s)
 
 static int		find_size(char const *s, char c)
 {
-	int			i;
+	size_t			i;
 	int			count;
 
 	i = 0;
@@ -57,7 +57,7 @@ char			**ft_split(char const *s, char c)
 {
 	char			**split_s;
 	int				s_size;
-	int				i;
+	size_t			i;
 	int				start;
 
 	if (!s)

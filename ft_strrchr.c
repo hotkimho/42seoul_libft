@@ -6,7 +6,7 @@
 /*   By: hkim2 <hkim2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 15:04:29 by hkim2             #+#    #+#             */
-/*   Updated: 2021/05/23 15:22:35 by hkim2            ###   ########.fr       */
+/*   Updated: 2021/06/02 16:01:54 by hkim2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return (&ptr_s[i]);
 		i--;
 	}
-	if (ptr_s[i] == c)
+	if (ptr_s[i] == (char)c)
 		return (ptr_s);
 	return (NULL);
 }
